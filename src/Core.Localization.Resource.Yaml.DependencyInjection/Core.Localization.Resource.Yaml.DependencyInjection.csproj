@@ -19,6 +19,7 @@
     <RepositoryUrl>https://github.com/kodlamaio-projects/nArchitecture.Core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Configurations>Debug;Release;Debug InMemory</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\docs\images\n-architecture-logo.png">
@@ -35,13 +36,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference
-      Include="..\Core.Localization.Resource.Yaml\Core.Localization.Resource.Yaml.csproj" />
-    <ProjectReference
-      Include="..\Core.Localization.Abstraction\Core.Localization.Abstraction.csproj" />
+    <ProjectReference Include="..\Core.Localization.Resource.Yaml\Core.Localization.Resource.Yaml.csproj" />
+    <ProjectReference Include="..\Core.Localization.Abstraction\Core.Localization.Abstraction.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"
-      Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
   </ItemGroup>
 </Project>

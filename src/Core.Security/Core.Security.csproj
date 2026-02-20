@@ -19,6 +19,7 @@
     <RepositoryUrl>https://github.com/kodlamaio-projects/nArchitecture.Core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Configurations>Debug;Release;Debug InMemory</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\docs\images\n-architecture-logo.png">
@@ -38,7 +39,7 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.2" />
     <PackageReference Include="Otp.NET" Version="1.4.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.15.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.8" />

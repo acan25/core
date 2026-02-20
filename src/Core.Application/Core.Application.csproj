@@ -17,6 +17,7 @@
     <RepositoryUrl>https://github.com/kodlamaio-projects/nArchitecture.Core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Configurations>Debug;Release;Debug InMemory</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\docs\images\n-architecture-logo.png">
@@ -36,7 +37,7 @@
     <PackageReference Include="FluentValidation" Version="11.9.2" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
     <PackageReference Include="MediatR" Version="12.4.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.8" />

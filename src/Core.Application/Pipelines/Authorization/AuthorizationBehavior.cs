@@ -29,11 +29,10 @@ public class AuthorizationBehavior<TRequest, TResponse> : IPipelineBehavior<TReq
         if (request.Roles.Any())
         {
             ICollection<string>? userRoleClaims = _httpContextAccessor.HttpContext.User.GetRoleClaims() ?? [];
-            bool isNotMatchedAUserRoleClaimWithRequestRoles = userRoleClaims
-                .FirstOrDefault(userRoleClaim =>
+            bool isNotMatchedAUserRoleClaimWithRequestRoles =
+                userRoleClaims.FirstOrDefault(userRoleClaim =>
                     userRoleClaim == GeneralOperationClaims.Admin || request.Roles.Contains(userRoleClaim)
-                )
-                == null;
+                ) == null;
             if (isNotMatchedAUserRoleClaimWithRequestRoles)
                 throw new AuthorizationException("You are not authorized.");
         }

@@ -136,9 +136,7 @@ public static class IQueryableDynamicFilterExtensions
             else if (filter.Operator == "in")
             {
                 var valueCount = filter.Value.Split(',').Length;
-                var paramIndexes = Enumerable.Range(index, valueCount)
-                                    .Select(i => $"@{i}")
-                                    .ToArray();
+                var paramIndexes = Enumerable.Range(index, valueCount).Select(i => $"@{i}").ToArray();
 
                 if (!filter.CaseSensitive)
                 {

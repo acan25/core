@@ -61,7 +61,11 @@ public class MailKitMailService : IMailService
         email.Body = bodyBuilder.ToMessageBody();
         email.Prepare(EncodingConstraint.SevenBit);
 
-        if (!string.IsNullOrEmpty(_mailSettings.DkimPrivateKey) && !string.IsNullOrEmpty(_mailSettings.DkimSelector) && !string.IsNullOrEmpty(_mailSettings.DomainName))
+        if (
+            !string.IsNullOrEmpty(_mailSettings.DkimPrivateKey)
+            && !string.IsNullOrEmpty(_mailSettings.DkimSelector)
+            && !string.IsNullOrEmpty(_mailSettings.DomainName)
+        )
         {
             DkimSigner signer =
                 new(key: readPrivateKeyFromPemEncodedString(), _mailSettings.DomainName, _mailSettings.DkimSelector)

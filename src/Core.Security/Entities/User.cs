@@ -21,7 +21,14 @@ public class User<TId> : Entity<TId>
         LastName = string.Empty;
     }
 
-    public User(string email, byte[] passwordSalt, byte[] passwordHash, AuthenticatorType authenticatorType, string firstName = "", string lastName = "")
+    public User(
+        string email,
+        byte[] passwordSalt,
+        byte[] passwordHash,
+        AuthenticatorType authenticatorType,
+        string firstName = "",
+        string lastName = ""
+    )
     {
         Email = email;
         PasswordSalt = passwordSalt;
@@ -31,7 +38,15 @@ public class User<TId> : Entity<TId>
         LastName = lastName;
     }
 
-    public User(TId id, string email, byte[] passwordSalt, byte[] passwordHash, AuthenticatorType authenticatorType, string firstName = "", string lastName = "")
+    public User(
+        TId id,
+        string email,
+        byte[] passwordSalt,
+        byte[] passwordHash,
+        AuthenticatorType authenticatorType,
+        string firstName = "",
+        string lastName = ""
+    )
         : base(id)
     {
         Email = email;

@@ -461,4 +461,33 @@ public class EfRepositoryBase<TEntity, TEntityId, TContext>
 
         Context.Update(entity);
     }
+
+    public async Task<int> CountAsync(
+    Expression<Func<TEntity, bool>>? predicate = null,
+    Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
+    bool withDeleted = false,
+    CancellationToken cancellationToken = default
+    )
+    {
+        IQueryable<TEntity> queryable = Query();
+        if (withDeleted)
+            queryable = queryable.IgnoreQueryFilters();
+        if (predicate != null)
+            queryable = queryable.Where(predicate);
+        return await queryable.CountAsync(cancellationToken);
+    }
+    public int Count(
+        Expression<Func<TEntity, bool>>? predicate = null,
+        Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null,
+        bool withDeleted = false
+    )
+    {
+        IQueryable<TEntity> queryable = Query();
+        if (withDeleted)
+            queryable = queryable.IgnoreQueryFilters();
+        if (predicate != null)
+            queryable = queryable.Where(predicate);
+        return queryable.Count();
+    }
+
 }

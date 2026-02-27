@@ -19,6 +19,7 @@
     <RepositoryUrl>https://github.com/kodlamaio-projects/nArchitecture.Core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Configurations>Debug;Release;Debug_Inmemory</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\docs\images\n-architecture-logo.png">
@@ -35,8 +36,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference
-      Include="..\Core.Localization.Abstraction\Core.Localization.Abstraction.csproj" />
+    <ProjectReference Include="..\Core.Localization.Abstraction\Core.Localization.Abstraction.csproj" />
     <ProjectReference Include="..\Core.Translation.Abstraction\Core.Translation.Abstraction.csproj" />
   </ItemGroup>
 </Project>

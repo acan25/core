@@ -18,7 +18,7 @@
     <RepositoryUrl>https://github.com/kodlamaio-projects/nArchitecture.Core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Configurations>Debug;Release;Debug InMemory</Configurations>
+    <Configurations>Debug;Release;Debug InMemory;Debug_Inmemory</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\docs\images\n-architecture-logo.png">

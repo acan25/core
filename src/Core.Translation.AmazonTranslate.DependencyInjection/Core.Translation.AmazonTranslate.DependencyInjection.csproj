@@ -20,6 +20,7 @@
     <RepositoryUrl>https://github.com/kodlamaio-projects/nArchitecture.Core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Configurations>Debug;Release;Debug_Inmemory</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\docs\images\n-architecture-logo.png">
@@ -36,8 +37,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference
-      Include="..\Core.Translation.AmazonTranslate\Core.Translation.AmazonTranslate.csproj" />
+    <ProjectReference Include="..\Core.Translation.AmazonTranslate\Core.Translation.AmazonTranslate.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />

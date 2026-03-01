@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Query;
 using NArchitecture.Core.Persistence.Dynamic;
 using NArchitecture.Core.Persistence.Paging;
-using System.Linq.Expressions;
 
 namespace NArchitecture.Core.Persistence.Repositories;
 

@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Net.Mime;
+using System.Text.Json;
+using Microsoft.AspNetCore.Http;
 using NArchitecture.Core.CrossCuttingConcerns.Exception.WebApi.Handlers;
 using NArchitecture.Core.CrossCuttingConcerns.Logging;
 using NArchitecture.Core.CrossCuttingConcerns.Logging.Abstraction;
-using System.Net.Mime;
-using System.Text.Json;
 
 namespace NArchitecture.Core.CrossCuttingConcerns.Exception.WebApi.Middleware;
 

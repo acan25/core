@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Query;
 using Moq;
 using NArchitecture.Core.Persistence.Paging;
 using NArchitecture.Core.Persistence.Repositories;
-using System.Linq.Expressions;
 
 namespace NArchitecture.Core.Test.Application.Helpers;
 

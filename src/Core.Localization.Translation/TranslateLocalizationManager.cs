@@ -1,6 +1,6 @@
-﻿using System.Data;
-using NArchitecture.Core.Localization.Abstraction;
+﻿using NArchitecture.Core.Localization.Abstraction;
 using NArchitecture.Core.Translation.Abstraction;
+using System.Data;
 
 namespace NArchitecture.Core.Localization.Translation;
 

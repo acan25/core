@@ -1,5 +1,4 @@
 ﻿using NArchitecture.Core.CrossCuttingConcerns.Logging.Configurations;
-using NArchitecture.Core.CrossCuttingConcerns.Logging.Serilog;
 using Serilog;
 
 namespace NArchitecture.Core.CrossCuttingConcerns.Logging.Serilog.File;

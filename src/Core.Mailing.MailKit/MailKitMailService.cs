@@ -1,7 +1,6 @@
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
 using MimeKit.Cryptography;
-using NArchitecture.Core.Mailing;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.OpenSsl;
 

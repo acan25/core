@@ -1,9 +1,9 @@
-﻿using System.Text;
-using System.Text.Json;
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Text;
+using System.Text.Json;
 
 namespace NArchitecture.Core.Application.Pipelines.Caching;
 

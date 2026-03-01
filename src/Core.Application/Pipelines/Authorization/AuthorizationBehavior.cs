@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.AspNetCore.Http;
-using Microsoft.IdentityModel.Tokens;
 using NArchitecture.Core.CrossCuttingConcerns.Exception.Types;
 using NArchitecture.Core.Security.Constants;
 using NArchitecture.Core.Security.Extensions;

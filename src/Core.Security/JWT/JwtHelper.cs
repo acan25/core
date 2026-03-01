@@ -1,12 +1,12 @@
-﻿using System.Collections.Immutable;
+﻿using Microsoft.IdentityModel.Tokens;
+using NArchitecture.Core.Security.Encryption;
+using NArchitecture.Core.Security.Entities;
+using NArchitecture.Core.Security.Extensions;
+using System.Collections.Immutable;
 using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using Microsoft.IdentityModel.Tokens;
-using NArchitecture.Core.Security.Encryption;
-using NArchitecture.Core.Security.Entities;
-using NArchitecture.Core.Security.Extensions;
 
 namespace NArchitecture.Core.Security.JWT;
 

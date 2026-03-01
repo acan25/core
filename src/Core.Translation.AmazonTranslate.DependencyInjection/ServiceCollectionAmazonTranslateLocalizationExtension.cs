@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NArchitecture.Core.Translation.Abstraction;
-using NArchitecture.Core.Translation.AmazonTranslate;
 
 namespace NArchitecture.Core.Translation.AmazonTranslate.DependencyInjection;
 

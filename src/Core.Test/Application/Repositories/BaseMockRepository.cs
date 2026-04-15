@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using NArchitecture.Core.Application.Rules;
 using NArchitecture.Core.Localization.Resource.Yaml;
@@ -22,10 +23,13 @@ public abstract class BaseMockRepository<TRepository, TEntity, TEntityId, TMappi
     public BaseMockRepository(TFakeData fakeData)
     {
         MapperConfiguration mapperConfig =
-            new(c =>
-            {
-                c.AddProfile<TMappingProfile>();
-            });
+            new(
+                c =>
+                {
+                    c.AddProfile<TMappingProfile>();
+                },
+                NullLoggerFactory.Instance
+            );
         Mapper = mapperConfig.CreateMapper();
 
         MockRepository = MockRepositoryHelper.GetRepository<TRepository, TEntity, TEntityId>(fakeData.Data);

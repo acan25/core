@@ -23,13 +23,10 @@ public abstract class BaseMockRepository<TRepository, TEntity, TEntityId, TMappi
     public BaseMockRepository(TFakeData fakeData)
     {
         MapperConfiguration mapperConfig =
-            new(
-                c =>
-                {
-                    c.AddProfile<TMappingProfile>();
-                },
-                NullLoggerFactory.Instance
-            );
+            new(c =>
+            {
+                c.AddProfile<TMappingProfile>();
+            });
         Mapper = mapperConfig.CreateMapper();
 
         MockRepository = MockRepositoryHelper.GetRepository<TRepository, TEntity, TEntityId>(fakeData.Data);

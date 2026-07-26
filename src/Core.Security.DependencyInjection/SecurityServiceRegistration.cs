@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NArchitecture.Core.Security.EmailAuthenticator;
+using NArchitecture.Core.Security.ExternalAuth;
 using NArchitecture.Core.Security.JWT;
 using NArchitecture.Core.Security.OtpAuthenticator;
 using NArchitecture.Core.Security.OtpAuthenticator.OtpNet;
@@ -19,6 +20,21 @@ public static class SecurityServiceRegistration
         >(_ => new JwtHelper<TUserId, TOperationClaimId, TRefreshTokenId>(tokenOptions));
         services.AddScoped<IEmailAuthenticatorHelper, EmailAuthenticatorHelper>();
         services.AddScoped<IOtpAuthenticatorHelper, OtpNetOtpAuthenticatorHelper>();
+
+        return services;
+    }
+
+    public static IServiceCollection AddExternalAuthServices(
+        this IServiceCollection services,
+        GoogleAuthOptions googleAuthOptions,
+        AppleAuthOptions appleAuthOptions
+    )
+    {
+        services.AddMemoryCache();
+        services.AddSingleton(googleAuthOptions);
+        services.AddSingleton(appleAuthOptions);
+        services.AddScoped<IGoogleAuthVerifier, GoogleAuthVerifier>();
+        services.AddHttpClient<IAppleAuthVerifier, AppleAuthVerifier>();
 
         return services;
     }

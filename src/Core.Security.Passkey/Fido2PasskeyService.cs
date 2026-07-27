@@ -72,7 +72,8 @@ public class Fido2PasskeyService : IPasskeyService
         AssertionOptions options = _fido2.GetAssertionOptions(
             new GetAssertionOptionsParams
             {
-                AllowedCredentials = allowCredentialIds?.Select(id => new PublicKeyCredentialDescriptor(id)).ToList()
+                AllowedCredentials =
+                    allowCredentialIds?.Select(id => new PublicKeyCredentialDescriptor(id)).ToList()
                     ?? new List<PublicKeyCredentialDescriptor>(),
                 UserVerification = UserVerificationRequirement.Preferred
             }

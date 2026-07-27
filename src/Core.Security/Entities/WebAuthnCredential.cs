@@ -28,14 +28,7 @@ public class WebAuthnCredential<TId, TUserId> : Entity<TId>
         DeviceName = deviceName;
     }
 
-    public WebAuthnCredential(
-        TId id,
-        TUserId userId,
-        byte[] credentialId,
-        byte[] publicKey,
-        uint signCount,
-        string deviceName
-    )
+    public WebAuthnCredential(TId id, TUserId userId, byte[] credentialId, byte[] publicKey, uint signCount, string deviceName)
         : base(id)
     {
         UserId = userId;

@@ -19,7 +19,13 @@ public class ExternalLogin<TId, TUserId> : Entity<TId>
         Email = string.Empty;
     }
 
-    public ExternalLogin(TUserId userId, ExternalAuthProvider provider, string providerUserId, string email, bool emailVerifiedByProvider)
+    public ExternalLogin(
+        TUserId userId,
+        ExternalAuthProvider provider,
+        string providerUserId,
+        string email,
+        bool emailVerifiedByProvider
+    )
     {
         UserId = userId;
         Provider = provider;

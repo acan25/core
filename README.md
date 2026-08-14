@@ -38,7 +38,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-- .NET 7
+- .NET 10
 
 ### Installation
 

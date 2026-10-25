@@ -13,7 +13,7 @@ public static class PasskeyServiceRegistration
             {
                 ServerDomain = passkeyOptions.RelyingPartyId,
                 ServerName = passkeyOptions.RelyingPartyName,
-                Origins = new HashSet<string>(passkeyOptions.Origins),
+                Origins = new HashSet<string>(passkeyOptions.Origins.Concat(androidOrigins(passkeyOptions))),
                 Timeout = (uint)passkeyOptions.TimeoutMs
             }
         ));
@@ -21,4 +21,14 @@ public static class PasskeyServiceRegistration
 
         return services;
     }
+
+    private static IEnumerable<string> androidOrigins(PasskeyOptions options) =>
+        options.AndroidCertificateFingerprints
+            .Where(fingerprint => !string.IsNullOrWhiteSpace(fingerprint))
+            .Select(fingerprint =>
+            {
+                byte[] hash = Convert.FromHexString(fingerprint.Replace(":", string.Empty).Trim());
+                string base64Url = Convert.ToBase64String(hash).TrimEnd('=').Replace('+', '-').Replace('/', '_');
+                return $"android:apk-key-hash:{base64Url}";
+            });
 }

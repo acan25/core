@@ -34,7 +34,7 @@ public class AppleAuthVerifier : IAppleAuthVerifier
                 new TokenValidationParameters
                 {
                     ValidIssuer = _options.Issuer,
-                    ValidAudience = _options.ClientId,
+                    ValidAudiences = new[] { _options.ClientId }.Concat(_options.AdditionalClientIds),
                     IssuerSigningKeys = jwks.Keys,
                     ValidateIssuer = true,
                     ValidateAudience = true,

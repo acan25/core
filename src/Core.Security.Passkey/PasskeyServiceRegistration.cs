@@ -23,8 +23,8 @@ public static class PasskeyServiceRegistration
     }
 
     private static IEnumerable<string> androidOrigins(PasskeyOptions options) =>
-        options.AndroidCertificateFingerprints
-            .Where(fingerprint => !string.IsNullOrWhiteSpace(fingerprint))
+        options
+            .AndroidCertificateFingerprints.Where(fingerprint => !string.IsNullOrWhiteSpace(fingerprint))
             .Select(fingerprint =>
             {
                 byte[] hash = Convert.FromHexString(fingerprint.Replace(":", string.Empty).Trim());

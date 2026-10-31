@@ -6,6 +6,7 @@ public class AppleAuthOptions
     /// The Services ID registered in Apple Developer for "Sign in with Apple" (used as the JWT `aud` claim).
     /// </summary>
     public string ClientId { get; set; } = string.Empty;
+
     /// <summary>
     /// Ek geçerli <c>aud</c> değerleri. iOS uygulamasının yerel "Apple ile giriş" akışı token'ın hedefine Services ID'yi
     /// değil uygulamanın bundle kimliğini (<c>com.dogruteklif.app</c>) yazar; mobil girişin çalışması için buraya eklenir.
